@@ -1,0 +1,91 @@
+:root {
+    --color-black: #000000;
+    --color-gray: #0D0C0C;
+    --color-white: #FFFFFF;
+    --color-lightred: #FF0000;
+    --color-darkred: #9A0404;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--color-black), var(--color-gray)); 
+    height: 100vh;
+    color: var(--color-darkred);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+#calc {
+    width: 400px;
+    padding: 0.5em;
+    background-color: var(--color-gray);
+    color: var(--color-darkred);
+    display: flex;
+    flex-direction: column;
+  }
+  
+h1 {
+    text-align: center;
+    padding: 25px;
+    font-size: 52px;
+}
+  
+#operations {
+    text-align: right;
+}
+  
+#previous-operation {
+    color: var(--color-white);
+    padding: 0.2em;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+  
+#current-operation {
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+  
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+  
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: var(--color-gray);
+    color: var(--color-darkred);
+    font-weight: 700;
+    cursor: pointer;
+}
+  
+#buttons-container button:hover {
+    background-color: var(--color-darkred);
+    color: var(--color-gray);
+}
+#buttons-container #equal-btn {
+    background-color: var(--color-darkred);
+    color: var(--color-gray);
+    grid-column: span 2;
+}
+#buttons-container #equal-btn:hover {
+    background-color: var(--color-gray);
+    color: var(--color-darkred);
+    border-color: var(--color-darkred);
+    border-width: 3px;
+}
+  
